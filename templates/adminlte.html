@@ -1,0 +1,28 @@
+{% extends "base - back.html" %}
+{% block head %}
+{{ super() }}
+<!-- js和css统一放在前面 -->
+{{ js_resources|safe }}
+{{ css_resources|safe }}
+{% endblock head %}
+{% block content %}
+<!-- row -->
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        {{ plot_script | safe }}
+        {{ plot_div | safe }}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        {{ plot_script2 | safe }}
+        {{ plot_div2 | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
